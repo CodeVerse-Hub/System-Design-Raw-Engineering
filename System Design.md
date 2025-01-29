@@ -101,10 +101,21 @@ flowchart LR
 # Tools and Libraries Flow
 ```mermaid
 graph LR
-  A[Authentication] --> Keycloak, JWT, OAuth2
-  B[Search] --> Elasticsearch, Apache Solr
-  C[Real-Time] --> Socket.io, MQTT - for lightweight messaging
-  D[Moderation] --> PerspectiveAPI - toxicity detection, custom rules engine
-  E[Analytics] --> Matomo
-  F[Notifications] --> Firebase Cloud Messaging - FCM, self-hosted Gotify
+  A[Authentication] --> B["Keycloak"]
+  A --> C["JWT"]
+  A --> D["OAuth2"]
+  
+  E[Search] --> F["Elasticsearch"]
+  E --> G["Apache Solr"]
+  
+  H[Real-Time] --> I["Socket.io"]
+  H --> J["MQTT"]
+  
+  K[Moderation] --> L["Perspective API"]
+  K --> M["Custom Rules Engine"]
+  
+  N[Analytics] --> O["Matomo"]
+  
+  P[Notifications] --> Q["Firebase Cloud Messaging (FCM)"]
+  P --> R["Gotify (self-hosted)"]
 ```
